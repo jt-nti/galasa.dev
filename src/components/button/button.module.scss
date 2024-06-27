@@ -21,6 +21,7 @@
 
 a.primary {
   color: #010610;
+  // background-color: #d84638;
   background-color: $highlight-color;
   position: relative;
   transition-property: left top;
@@ -63,8 +64,42 @@ a.primary {
 
 a.secondary {
   color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: relative;
+  transition-property: left top;
+  transition-duration: 0.1s;
+  left: 0;
+  top: 0;
+
+  &::after {
+    content: " ";
+    display: block;
+    border: 2px solid #fff;
+    width: 100%;
+    height: 100%;
+    left: 8px;
+    top: 10px;
+
+    transition-property: left top;
+    transition-duration: 0.1s;
+
+    position: absolute;
+    z-index: -1;
+  }
+
   &:hover,
   &:focus {
     background-color: rgba(255, 255, 255, 0.1);
+
+    &::after {
+      left: 4px;
+      top: 5px;
+    }
+  }
+
+  &:active {
+    position: relative;
+    top: 3px;
+    left: 2px;
   }
 }

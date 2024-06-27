@@ -122,11 +122,17 @@ const IndexPage = () => (
           <Button target={"/docs"} flash={true} isPrimary={true}>
             Get started
           </Button>
-          <Button target={"/about"} flash={true} isPrimary={true}>
+          <Button target={"/about"} flash={true} isPrimary={false}>
             Learn more
           </Button>
-          <Button target={"/releases"} flash={true} isPrimary={true}>
+          <Button target={"/releases"} flash={true} isPrimary={false}>
             0.34.1 highlights
+          </Button>
+          <Button target={"/support"} flash={true} isPrimary={false}>
+            Support
+          </Button>
+          <Button target={"/hub"} flash={true} isPrimary={false}>
+            Blogs
           </Button>
         </div>
       </div>
